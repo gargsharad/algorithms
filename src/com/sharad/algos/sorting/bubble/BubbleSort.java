@@ -36,7 +36,7 @@ public class BubbleSort {
 	}
 
 	public static void main(String[] args) {
-		BubbleSort bs = new BubbleSort();
+		BubbleSort bubbleSort = new BubbleSort();
 		Integer[] input = RandomGenerator.getRandomIntegers(20);
 		System.out.println("Input Array");
 		int i = 0;
@@ -48,7 +48,7 @@ public class BubbleSort {
 			}
 			i++;
 		}
-		bs.sort(input);
+		bubbleSort.sort(input);
 		i = 0;
 		System.out.println("Sorted Array");
 		for (Integer integer : input) {
