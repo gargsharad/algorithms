@@ -39,25 +39,9 @@ public class BubbleSort {
 		BubbleSort bubbleSort = new BubbleSort();
 		Integer[] input = RandomGenerator.getRandomIntegers(20);
 		System.out.println("Input Array");
-		int i = 0;
-		for (Integer integer : input) {
-			if (i + 1 < input.length) {
-				System.out.print(integer + ",");
-			} else {
-				System.out.println(integer);
-			}
-			i++;
-		}
+		RandomGenerator.printArray(input);
 		bubbleSort.sort(input);
-		i = 0;
 		System.out.println("Sorted Array");
-		for (Integer integer : input) {
-			if (i + 1 < input.length) {
-				System.out.print(integer + ",");
-			} else {
-				System.out.print(integer);
-			}
-			i++;
-		}
+		RandomGenerator.printArray(input);
 	}
 }

@@ -22,26 +22,10 @@ public class SelectionSort {
 		SelectionSort selectionSort = new SelectionSort();
 		Integer[] input = RandomGenerator.getRandomIntegers(20);
 		System.out.println("Input Array");
-		int i = 0;
-		for (Integer integer : input) {
-			if (i + 1 < input.length) {
-				System.out.print(integer + ",");
-			} else {
-				System.out.println(integer);
-			}
-			i++;
-		}
+		RandomGenerator.printArray(input);
 		selectionSort.sort(input);
-		i = 0;
 		System.out.println("Sorted Array");
-		for (Integer integer : input) {
-			if (i + 1 < input.length) {
-				System.out.print(integer + ",");
-			} else {
-				System.out.print(integer);
-			}
-			i++;
-		}
+		RandomGenerator.printArray(input);
 	}
 
 	private void sort(Integer[] input) {
@@ -50,14 +34,18 @@ public class SelectionSort {
 		int j;
 		int temp;
 		for (i = 0; i < input.length - 1; i++) {
-			minIdx = i; // selecting an index and assuming this index holds smallest value
-			for (j = minIdx + 1; j < input.length; j++) { // scan rest of the array to check our assumption
-				if (input[j] < input[minIdx]) { // our assumption breaks 
-					minIdx = j; // update the index of smallest value 
-				} // continue scanning until reach end of list
+			minIdx = i; // selecting an index and assuming this index holds
+						// smallest value
+			for (j = minIdx + 1; j < input.length; j++) { 	// scan rest of the
+															// array to check
+															// our assumption
+				if (input[j] < input[minIdx]) { // our assumption breaks
+					minIdx = j; 				// update the index of smallest value
+				} 								// continue scanning until reach end of list
 			}
-			if (minIdx != i) { // compare the initial value of minIdx with the value after scanning if they
-							   // don't match swap elements
+			if (minIdx != i) { 	// compare the initial value of minIdx with the
+								// value after scanning if they
+								// don't match swap elements
 				temp = input[i];
 				input[i] = input[minIdx];
 				input[minIdx] = temp;
