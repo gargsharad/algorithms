@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.sharad.algos.sorting;
+package com.sharad.algos.sorting.insertion;
 
 public class InsertionSort {
 
