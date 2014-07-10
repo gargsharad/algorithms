@@ -16,6 +16,7 @@
 package com.sharad.algos.sorting.bubble;
 
 import com.sharad.algos.common.RandomGenerator;
+import com.sharad.algos.common.Utility;
 
 public class BubbleSort {
 
@@ -39,9 +40,9 @@ public class BubbleSort {
 		BubbleSort bubbleSort = new BubbleSort();
 		Integer[] input = RandomGenerator.getRandomIntegers(20);
 		System.out.println("Input Array");
-		RandomGenerator.printArray(input);
+		Utility.printArray(input);
 		bubbleSort.sort(input);
 		System.out.println("Sorted Array");
-		RandomGenerator.printArray(input);
+		Utility.printArray(input);
 	}
 }

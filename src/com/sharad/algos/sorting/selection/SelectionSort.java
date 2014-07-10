@@ -15,6 +15,7 @@
 package com.sharad.algos.sorting.selection;
 
 import com.sharad.algos.common.RandomGenerator;
+import com.sharad.algos.common.Utility;
 
 public class SelectionSort {
 
@@ -22,10 +23,10 @@ public class SelectionSort {
 		SelectionSort selectionSort = new SelectionSort();
 		Integer[] input = RandomGenerator.getRandomIntegers(20);
 		System.out.println("Input Array");
-		RandomGenerator.printArray(input);
+		Utility.printArray(input);
 		selectionSort.sort(input);
 		System.out.println("Sorted Array");
-		RandomGenerator.printArray(input);
+		Utility.printArray(input);
 	}
 
 	private void sort(Integer[] input) {
