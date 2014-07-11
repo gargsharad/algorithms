@@ -11,5 +11,4 @@ public class RandomGenerator {
 		}
 		return randomInts;
 	}
-
 }

@@ -23,7 +23,7 @@ public class InsertionSort {
 		for (i = 1; i < input.length; i++) {
 			key = input[i];
 			for (j = i - 1; j >= 0 && input[j] > key; j--) {
-				input[j + 1] = input[j];
+				input[j + 1] = input[j]; //shifting the elements to right  
 			}
 			input[j + 1] = key;
 		}
