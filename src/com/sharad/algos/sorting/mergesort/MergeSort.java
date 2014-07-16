@@ -29,12 +29,34 @@ public class MergeSort {
 			Integer midIdx = (minIdx + maxIdx) / 2;
 			sort(input, auxArray, minIdx, midIdx);
 			sort(input, auxArray, midIdx + 1, maxIdx);
-			merge(input, auxArray, midIdx, midIdx, maxIdx);
+			merge(input, auxArray, minIdx, midIdx, maxIdx);
 		}
 	}
 
-	private void merge(Integer[] input, Integer[] auxArray, Integer midIdx,
-			Integer midIdx2, Integer maxIdx) {
-		
+	private void merge(Integer[] input, Integer[] auxArray, Integer minIdx,
+			Integer midIdx, Integer maxIdx) {
+		// first copy the elements to aux array
+		int i, j, k;
+		System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+		System.out.println("minIndex :: " + minIdx + " maxIndex ::" + maxIdx
+				+ " midIndex ::" + midIdx);
+		for (i = minIdx; i <= maxIdx; i++)
+			auxArray[i] = input[i];
+		Utility.printArray(auxArray);
+
+		i = minIdx;
+		j = midIdx + 1;
+		k = minIdx;
+		// copy back next-greatest element at each time
+		while (i <= midIdx && j <= maxIdx) {
+			if (auxArray[i] <= auxArray[j])
+				input[k++] = auxArray[i++];
+			else
+				input[k++] = auxArray[j++];
+		}
+		// copy back remaining elements of first half (if any)
+		while (i <= midIdx) {
+			input[k++] = auxArray[i++];
+		}
 	}
 }
