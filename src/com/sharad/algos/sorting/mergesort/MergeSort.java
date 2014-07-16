@@ -47,14 +47,14 @@ public class MergeSort {
 		i = minIdx;
 		j = midIdx + 1;
 		k = minIdx;
-		// copy back next-greatest element at each time
+		
 		while (i <= midIdx && j <= maxIdx) {
 			if (auxArray[i] <= auxArray[j])
 				input[k++] = auxArray[i++];
 			else
 				input[k++] = auxArray[j++];
 		}
-		// copy back remaining elements of first half (if any)
+		
 		while (i <= midIdx) {
 			input[k++] = auxArray[i++];
 		}
