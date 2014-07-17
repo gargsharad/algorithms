@@ -37,9 +37,6 @@ public class MergeSort {
 			Integer midIdx, Integer maxIdx) {
 		// first copy the elements to aux array
 		int i, j, k;
-		System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-		System.out.println("minIndex :: " + minIdx + " maxIndex ::" + maxIdx
-				+ " midIndex ::" + midIdx);
 		for (i = minIdx; i <= maxIdx; i++)
 			auxArray[i] = input[i];
 		Utility.printArray(auxArray);
