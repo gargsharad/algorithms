@@ -17,7 +17,7 @@ public class MergeSort {
 	}
 
 	private void sort(Integer[] input, Integer[] auxArray) {
-		int minIdx, maxIdx;
+		Integer minIdx, maxIdx;
 		minIdx = 0;
 		maxIdx = input.length - 1;
 		sort(input, auxArray, minIdx, maxIdx);
@@ -36,7 +36,7 @@ public class MergeSort {
 	private void merge(Integer[] input, Integer[] auxArray, Integer minIdx,
 			Integer midIdx, Integer maxIdx) {
 		// first copy the elements to aux array
-		int i, j, k;
+		Integer i, j, k;
 		for (i = minIdx; i <= maxIdx; i++)
 			auxArray[i] = input[i];
 		Utility.printArray(auxArray);
