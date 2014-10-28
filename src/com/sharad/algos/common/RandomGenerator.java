@@ -7,7 +7,7 @@ public class RandomGenerator {
 		Integer[] randomInts = new Integer[range];
 		Random randomGenerator = new Random();
 		for (int idx = 0; idx < range; ++idx) {
-			randomInts[idx] = randomGenerator.nextInt(1000);
+			randomInts[idx] = randomGenerator.nextInt(10000);
 		}
 		return randomInts;
 	}
